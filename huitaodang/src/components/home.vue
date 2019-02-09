@@ -1,31 +1,26 @@
 <template>
-<div>
-  <sidebar v-if="$store.state.sidebarShow"></sidebar>
-  <navbar v-if="$store.state.isShow"></navbar>
-  <router-view></router-view>
- </div>
+  <div>
+  	<sidebar></sidebar>
+  	<navbar></navbar>
+  </div>
 </template>
 
 <script>
 import sidebar from './components/sidebar.vue'
 import navbar from './components/navbar.vue'
 export default {
-  components:{
-    sidebar,
-    navbar
-  }
+  
 }
 </script>
 
 <style>
-  *{
+ *{
     margin: 0px;
     padding: 0px;
   }
   li{
     list-style: none;
   }
-  html{background-color: #1d1d1f;} 
   #box{height: 700px; width: 200px; background-color: red;float: left;box-sizing:border-box;}
   #box ul{overflow: hidden;}
   #box li{margin-top: 20px;cursor: pointer;}

@@ -10,7 +10,18 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+        //配置反向代理
+        "/api":{
+            target:"http://www.imxingzhe.com",
+            changeOrigin:true
+        }
+
+        /*"/webadm":{
+            target:"http://static.imxingzhe.com",
+            changeOrigin:true
+        }*/
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
